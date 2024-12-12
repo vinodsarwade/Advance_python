@@ -26,3 +26,23 @@ if __name__=="__main__":
 
     finished_time = time.time()- t
     print(finished_time)
+
+
+
+
+##  Multiprocessing with ProcessPoolExecuter   ########
+
+from concurrent.futures import ProcessPoolExecutor
+import time
+
+def square_number(number):
+    time.sleep(1)
+    return f"Square: {number * number}"
+
+number = [1,2,3,4,5,6,7,8,9]
+if __name__=="__main__":
+    with ProcessPoolExecutor(max_workers=3) as executer:
+        result= executer.map(square_number,number)
+        # print(result)
+    for i in result:
+        print(i)
