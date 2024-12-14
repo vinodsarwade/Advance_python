@@ -8,13 +8,6 @@ waiting for responces from server.Multithreading can significantly improve
 the performance by allowing multiple web pages to be fetched concurrently.
 
 '''
-'''
-https://www.langchain.com/
-https://pandas.pydata.org/
-https://python.langchain.com/docs/introduction/
-
-'''
-
 import threading 
 import requests
 from bs4 import BeautifulSoup
@@ -41,4 +34,3 @@ for thread in threads:
     thread.join()
 
 print("All web pages fetched")
-

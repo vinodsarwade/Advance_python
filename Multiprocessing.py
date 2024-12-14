@@ -28,8 +28,6 @@ if __name__=="__main__":
     print(finished_time)
 
 
-
-
 ##  Multiprocessing with ProcessPoolExecuter   ########
 
 from concurrent.futures import ProcessPoolExecutor
